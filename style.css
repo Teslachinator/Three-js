@@ -1,0 +1,46 @@
+:root {
+  font-size: 62.5%;
+}
+body {
+  width: 100%;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+  height: 400px;
+
+  /* width: 70%;
+  height: 40rem; */
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.lights {
+  margin-top: 50px;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  gap: 1.5rem;
+}
+form {
+  background: #cfcfcf;
+  border-radius: 50px;
+  padding: 20px;
+  width: max-content;
+  box-shadow: -10px -10px 30px #ffffff, 10px 10px 30px rgba(174, 174, 192, 0.4);
+}
+h2 {
+  font-size: x-large;
+}
+label {
+  font-size: large;
+}

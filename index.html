@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div><canvas id="c"></canvas></div>
+    <div class="flex">
+      <form>
+        <h2>Куб</h2>
+        <label
+          ><input type="radio" value="gray" name="color" checked />Серый</label
+        >
+        <label><input type="radio" value="red" name="color" />Красный</label>
+        <label><input type="radio" value="green" name="color" />Зеленый</label>
+        <label><input type="radio" value="blue" name="color" />Синий</label>
+      </form>
+      <form>
+        <h2>Фон</h2>
+        <label
+          ><input type="radio" value="gray" name="color" checked />Серый</label
+        >
+        <label><input type="radio" value="red" name="color" />Красный</label>
+        <label><input type="radio" value="green" name="color" />Зеленый</label>
+        <label><input type="radio" value="blue" name="color" />Синий</label>
+      </form>
+      <form>
+        <h2>Пирамида</h2>
+        <label
+          ><input type="radio" value="gray" name="color" checked />Серый</label
+        >
+        <label><input type="radio" value="red" name="color" />Красный</label>
+        <label><input type="radio" value="green" name="color" />Зеленый</label>
+        <label><input type="radio" value="blue" name="color" />Синий</label>
+      </form>
+    </div>
+    <div class="lights">
+      <form>
+        <h2>directionalLight</h2>
+        <label
+          ><input type="radio" value="1" name="light" checked />Включить</label
+        >
+        <label><input type="radio" value="0" name="light" />Выключить</label>
+      </form>
+      <form>
+        <h2>directionalLight2</h2>
+        <label
+          ><input type="radio" value="1" name="light" checked />Включить</label
+        >
+        <label><input type="radio" value="0" name="light" />Выключить</label>
+      </form>
+      <form>
+        <h2>hemiLight</h2>
+        <label
+          ><input type="radio" value="1" name="light" checked />Включить</label
+        >
+        <label><input type="radio" value="0" name="light" />Выключить</label>
+      </form>
+      <form>
+        <h2>scene rotate</h2>
+        <label><input type="button" value="1" name="camerapos" /></label>
+        <label><input type="button" value="-1" name="camerapos" /></label>
+      </form>
+      <form>
+        <h2>scene zoom</h2>
+        <label><input type="button" value="1" name="camerapos" /></label>
+        <label><input type="button" value="-1" name="camerapos" /></label>
+      </form>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
