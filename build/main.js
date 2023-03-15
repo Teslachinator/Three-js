@@ -104,7 +104,6 @@ cube.castShadow = true;
 scene.add(cube);
 cube.position.y = 0.5;
 cube.position.x = -0.5;
-// cube.position.z = 2;
 
 //Камера
 const camera = new THREE.PerspectiveCamera(
@@ -142,7 +141,6 @@ scene.add(plane);
 const renderer = new THREE.WebGLRenderer({ antialias: true, canvas });
 renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 
-// canvas.appendChild(renderer.domElement);
 renderer.shadowMap.enabled = true;
 function render(time) {
   time *= 0.001; // конвертировать время в секунды
