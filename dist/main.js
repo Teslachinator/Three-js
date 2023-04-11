@@ -1,5 +1,5 @@
 // import * as THREE from "../node_modules/three/build/three.module.js";
-import * as THREE from 'three'
+import * as THREE from "three";
 
 const canvas = document.querySelector("#c");
 //
@@ -146,7 +146,12 @@ renderer.setSize(canvas.clientWidth, canvas.clientHeight);
 renderer.shadowMap.enabled = true;
 function render(time) {
   time *= 0.001; // конвертировать время в секунды
-
+  if (Math.abs(flag) == 1) {
+    scene.rotation.y += 0.02 * flag;
+  }
+  if (Math.abs(flag1) == 1) {
+    camera.position.z += 0.02 * flag1 * -1;
+  }
   cube.rotation.x = time;
   cube.rotation.y = time;
 
@@ -178,13 +183,33 @@ document.forms[4].addEventListener("change", (e) => {
 document.forms[5].addEventListener("change", (e) => {
   hemiLight.intensity = e.target.value;
 });
-document.forms[6].addEventListener("click", (e) => {
-  if (Math.abs(e.target.value) == 1) {
-    scene.rotation.y += e.target.value * 0.1;
+// document.forms[6].addEventListener("click", (e) => {
+//   if (Math.abs(e.target.value) == 1) {
+//     scene.rotation.y += e.target.value * 0.1;
+//   }
+// });
+// document.forms[7].addEventListener("click", (e) => {
+//   if (Math.abs(e.target.value) == 1) {
+//     camera.position.z += e.target.value * -0.1;
+//   }
+// });
+let flag = 0;
+let flag1 = 0;
+const fun = (e, flag) => {
+  while (flag == 1) {
+    return (scene.rotation.y += e.target.value * 0.1);
   }
+};
+document.forms[6].addEventListener("mousedown", (e) => {
+  return (flag = e.target.value);
 });
-document.forms[7].addEventListener("click", (e) => {
-  if (Math.abs(e.target.value) == 1) {
-    camera.position.z += e.target.value * -0.1;
-  }
+document.forms[6].addEventListener("mouseup", () => {
+  return (flag = 0);
+});
+
+document.forms[7].addEventListener("mousedown", (e) => {
+  return (flag1 = e.target.value);
+});
+document.forms[7].addEventListener("mouseup", () => {
+  return (flag1 = 0);
 });

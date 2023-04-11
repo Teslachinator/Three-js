@@ -23,6 +23,7 @@ form {
 .flex {
   display: flex;
   justify-content: space-between;
+  margin-top: 50px;
 }
 .lights {
   margin-top: 50px;
